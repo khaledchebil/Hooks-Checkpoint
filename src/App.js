@@ -63,14 +63,19 @@ function App() {
   const [moviesList, setmoviesList] = useState(movies)
 // add
 const addMovie = (newMovie) => {
-  setmoviesList([...moviesList, newMovie])
-}
+  setmoviesList([...moviesList, newMovie]);
+};
 
   return (
     <div className='tc'>
     <h1>Movie List</h1>
+
     <Filter addMovie={addMovie}/>
-    <CardList movies = {movies}/>
+    
+    <CardList 
+       moviesList = {moviesList}
+       movies = {movies}
+    />
 
     </div>
     );

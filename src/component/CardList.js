@@ -2,7 +2,7 @@ import React, {useState}  from 'react';
 import Card from './Card'
 
 
-const CardList =({movies}) => {
+const CardList =({moviesList}) => {
     const [search, setSearch] = useState('')
     const [input, setInput] = useState('')
     
@@ -12,7 +12,7 @@ const handelChange=(e) => {
 }
 
 if(input.length >0) {
-movies = movies.filter((movie)=> {
+    moviesList = moviesList.filter((movie)=> {
 return movie.name.toLowerCase().includes(input.toLowerCase())
 })
 }
@@ -23,7 +23,7 @@ const handelRate =(e) => {
 }
 
 if(search.length>0) {
-movies = movies.filter((y) => {
+    moviesList = moviesList.filter((y) => {
     return y.Review.match(search)
 })
 }
@@ -31,14 +31,14 @@ movies = movies.filter((y) => {
     return(
      
        <div >
-             <input className='pa2 ba ' 
+             <input className='pa2 ba bw1 ma1 br4' 
             type='text' 
             placeholder='search By Rate' 
             onChange={handelRate} 
             value ={search}
             />
         <br />
-         <input className='pa2 ba ' 
+         <input className='pa2 ba bw1 ma1 br4' 
             type='text' 
             placeholder='search Movie By name' 
             onChange={handelChange}
@@ -48,7 +48,7 @@ movies = movies.filter((y) => {
             
        {
            
-           movies.map((film,i) => {
+           moviesList.map((film,i) => {
        return  <Card key={i} {...film} /> })
        }
         </div>

@@ -51,7 +51,7 @@ const movies = [
     id:7,
     name: 'the other',
     Genre: 'Mystery',
-    picUrl:'https://lh3.googleusercontent.com/proxy/ZdJr_Q13OzM-Xw2SbF7369jRR0d2NIYzyRNEJfPVfvbxURbQ3QOeVQdPxzrOUL8G1Csa6YnCRrdpe08NPOPPzKhbmV7OQeI',
+    picUrl:'https://www.moviesite.co.za/2019/0503/the-other-side_poster.jpg',
     Review: '1'
   } 
 
